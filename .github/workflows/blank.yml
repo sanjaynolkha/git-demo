@@ -1,0 +1,20 @@
+name: Lint Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run lint step
+        run: |
+          echo "Linting started"
+          ls
+          echo "Linting completed"
